@@ -70,7 +70,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
   void initState() {
     _selectedCountry = widget.selectedCountry;
 
-    _filteredCountries = widget.filteredCountries.toList()
+    _filteredCountries = widget.filteredCountries.toList();
    
   
 
