@@ -82,6 +82,7 @@ class IntlPhoneField extends StatefulWidget {
   ///
   /// If null, this widget will create its own [FocusNode].
   ///
+  
   /// ## Keyboard
   ///
   /// Requesting the focus will typically cause the keyboard to be shown
