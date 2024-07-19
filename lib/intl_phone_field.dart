@@ -16,7 +16,9 @@ class IntlPhoneField extends StatefulWidget {
 
   /// Whether to hide the text being edited (e.g., for passwords).
   final bool obscureText;
+  final bool hideDialCode;
 
+  hideDialCode
   /// How the text should be aligned horizontally.
   final TextAlign textAlign;
 
@@ -256,6 +258,7 @@ class IntlPhoneField extends StatefulWidget {
     this.languageCode = 'en',
     this.disableAutoFillHints = false,
     this.obscureText = false,
+    this.hideDialCode=false,
     this.textAlign = TextAlign.left,
     this.textAlignVertical,
     this.onTap,
@@ -387,6 +390,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       autofillHints: widget.disableAutoFillHints ? null : [AutofillHints.telephoneNumberNational],
       readOnly: widget.readOnly,
       obscureText: widget.obscureText,
+      hideDialCode:widget.hideDialCode,
       textAlign: widget.textAlign,
       textAlignVertical: widget.textAlignVertical,
       cursorColor: widget.cursorColor,
@@ -483,6 +487,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                         ),
                   const SizedBox(width: 8),
                 ],
+                hideDialCode?SizedBox.shrink():
                 FittedBox(
                   child: Text(
                     '+${_selectedCountry.dialCode}',
