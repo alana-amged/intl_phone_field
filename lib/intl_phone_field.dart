@@ -18,7 +18,7 @@ class IntlPhoneField extends StatefulWidget {
   final bool obscureText;
   final bool hideDialCode;
 
-  hideDialCode
+
   /// How the text should be aligned horizontally.
   final TextAlign textAlign;
 
@@ -487,7 +487,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                         ),
                   const SizedBox(width: 8),
                 ],
-                hideDialCode?SizedBox.shrink():
+                widget.hideDialCode?SizedBox.shrink():
                 FittedBox(
                   child: Text(
                     '+${_selectedCountry.dialCode}',
