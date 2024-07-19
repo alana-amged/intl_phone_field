@@ -69,10 +69,12 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
   @override
   void initState() {
     _selectedCountry = widget.selectedCountry;
+   /*
     _filteredCountries = widget.filteredCountries.toList()
       ..sort(
         (a, b) => a.localizedName(widget.languageCode).compareTo(b.localizedName(widget.languageCode)),
       );
+   */
 
     super.initState();
   }
@@ -104,10 +106,12 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                       labelText: widget.searchText,
                     ),
                 onChanged: (value) {
-                  _filteredCountries = widget.countryList.stringSearch(value)
+                  _filteredCountries = widget.countryList.stringSearch(value);
+                  /*
                     ..sort(
                       (a, b) => a.localizedName(widget.languageCode).compareTo(b.localizedName(widget.languageCode)),
                     );
+                    */
                   if (mounted) setState(() {});
                 },
               ),
