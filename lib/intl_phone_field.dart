@@ -390,7 +390,6 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       autofillHints: widget.disableAutoFillHints ? null : [AutofillHints.telephoneNumberNational],
       readOnly: widget.readOnly,
       obscureText: widget.obscureText,
-      hideDialCode:widget.hideDialCode,
       textAlign: widget.textAlign,
       textAlignVertical: widget.textAlignVertical,
       cursorColor: widget.cursorColor,
